@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:orientation="vertical"
+     android:weightSum="1" >
+     
+     <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="0dp" 
+         android:layout_weight="0.25"
+         android:gravity="bottom">
+
+         <Button
+             android:id="@+id/btnValidate"
+             android:layout_width="wrap_content"
+             android:layout_height="fill_parent"
+             android:layout_weight="0.80"
+             android:text="@string/validate"
+             android:textSize="60px" />
+         
+         <Button
+             android:id="@+id/btnPrevious"
+             android:layout_width="wrap_content"
+             android:layout_height="fill_parent"
+             android:layout_weight="0.20"
+             android:text="@string/previous"
+             android:textSize="60px"
+             android:visibility="invisible" />
+
+         <Button
+             android:id="@+id/btnNext"
+             android:layout_width="wrap_content"
+             android:layout_height="fill_parent"
+             android:layout_weight="0.20"
+             android:text="@string/next"
+             android:textSize="60px"
+             android:visibility="invisible" />
+     </LinearLayout>
+     
+     <LinearLayout
+         android:id="@+id/llIncreaseFont"
+         android:baselineAligned="false"
+         android:layout_width="fill_parent"
+         android:layout_height="0dp"
+         android:layout_weight=".20"
+         android:gravity="left|center_vertical"
+         android:paddingBottom="5sp"
+         android:paddingLeft="5sp"
+         android:paddingRight="5sp"
+         android:paddingTop="5sp" >
+
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="fill_parent"
+             android:orientation="vertical"
+             android:gravity="center_vertical"
+             android:layout_weight="0.55" >
+
+             <TextView
+                 android:id="@+id/tvKataNameP"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="NOME KATA"
+                 android:textSize="20px" />
+
+             <TextView
+                 android:id="@+id/tvSetNameP"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="NOME SERIE"
+                 android:textSize="20px" />
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="fill_parent"
+             android:layout_weight="0.45"
+             android:gravity="right|center_vertical" >
+
+             <gc.palazen.CheckImage
+                 android:id="@+id/p1P"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="20"
+                 android:layout_margin="2sp"
+                 android:scaleType="fitCenter"
+                 android:adjustViewBounds="true"
+                 android:src="@drawable/checkboxblur" />
+
+             <gc.palazen.CheckImage
+                 android:id="@+id/p2P"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="20"
+                 android:layout_margin="2sp"
+                 android:scaleType="fitCenter"
+                 android:adjustViewBounds="true"
+                 android:src="@drawable/checkboxblur" />
+
+             <gc.palazen.CheckImage
+                 android:id="@+id/p3P"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="20"
+                 android:layout_margin="2sp"
+                 android:scaleType="fitCenter"
+                 android:adjustViewBounds="true"
+                 android:src="@drawable/checkboxblur" />
+
+             <gc.palazen.CheckImage
+                 android:id="@+id/p4P"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="20"
+                 android:layout_margin="2sp"
+                 android:scaleType="fitCenter"
+                 android:adjustViewBounds="true"
+                 android:src="@drawable/checkboxblur" />
+
+             <gc.palazen.CheckImage
+                 android:id="@+id/p5P"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="20"
+                 android:layout_margin="2sp"
+                 android:scaleType="fitCenter"
+                 android:adjustViewBounds="true"
+                 android:src="@drawable/checkboxblur" />
+
+             <TextView
+                 android:id="@+id/tvTotalP"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="20"
+                 android:layout_gravity="center_vertical"
+                 android:gravity="center"
+                 android:text="10"
+                 android:textSize="50px" />
+
+         </LinearLayout>
+     </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/border"
+         android:layout_width="fill_parent"
+         android:layout_height="0dp"
+         android:layout_weight="0.35"
+         android:background="@drawable/border_red"
+         android:gravity="left|center_vertical"
+         android:paddingBottom="5sp"
+         android:paddingLeft="5sp"
+         android:paddingRight="5sp"
+         android:paddingTop="5sp" >
+
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="fill_parent"
+             android:layout_weight="0.55"
+             android:gravity="center_vertical"
+             android:orientation="vertical" >
+
+             <gc.palazen.AutoFitTextView
+                 android:id="@+id/tvKataName"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:lines="1"
+                 android:layout_weight="1"
+                 android:textSize="50px"
+                 android:gravity="bottom"
+                 android:text="NOME KATA" />
+
+             <gc.palazen.AutoFitTextView
+                 android:id="@+id/tvSetName"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:lines="1"
+                 android:layout_weight="1"
+                 android:textSize="30px"
+                 android:text="NOME SERIE" />
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="fill_parent"
+             android:layout_weight="0.45"
+             android:orientation="horizontal"
+             android:weightSum="1.20"
+             android:gravity="right|center_vertical" >
+
+             <LinearLayout
+                 style="@style/layoutSmall"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="0.20" >
+                 
+                 <gc.palazen.CheckImage
+	                 android:id="@+id/p1"
+	                 android:layout_width="match_parent"
+	                 android:layout_height="match_parent"
+	                 android:layout_margin="0sp"
+	                 android:padding="3sp"
+	                 android:src="@drawable/checkbox_off_background_s" />
+             </LinearLayout>
+             
+             <LinearLayout
+                 style="@style/layoutSmall"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="0.20" >
+                 
+                 <gc.palazen.CheckImage
+	                 android:id="@+id/p2"
+	                 android:layout_width="match_parent"
+	                 android:layout_height="match_parent"
+	                 android:layout_margin="0sp"
+	                 android:padding="3sp"
+	                 android:src="@drawable/checkbox_off_background_s" />
+             </LinearLayout>
+             
+             <LinearLayout
+                 style="@style/layoutMedium"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="0.20" >
+                 
+                 <gc.palazen.CheckImage
+	                 android:id="@+id/p3"
+	                 android:layout_width="match_parent"
+	                 android:layout_height="match_parent"
+	                 android:layout_margin="0sp"
+	                 android:padding="3sp"
+	                 android:src="@drawable/checkbox_off_background_m" />
+             </LinearLayout>
+             
+             <LinearLayout
+                 style="@style/layoutBig"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="0.20" >
+                 
+                 <gc.palazen.CheckImage
+	                 android:id="@+id/p4"
+	                 android:layout_width="match_parent"
+	                 android:layout_height="match_parent"
+	                 android:layout_margin="0sp"
+	                 android:padding="3sp"
+	                 android:src="@drawable/checkbox_off_background_b" />
+             </LinearLayout>
+             
+             <LinearLayout
+                 style="@style/layoutForgotten"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="0.20" >
+                 
+                 <gc.palazen.CheckImage
+	                 android:id="@+id/p5"
+	                 android:layout_width="match_parent"
+	                 android:layout_height="match_parent"
+	                 android:layout_margin="0sp"
+	                 android:padding="3sp"
+	                 android:src="@drawable/checkbox_off_background_f" />
+             </LinearLayout>
+             
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="0.20" >
+                 
+                 <TextView
+	                 android:id="@+id/tvTotal"
+	                 android:layout_width="match_parent"
+	                 android:layout_height="match_parent"
+	                 android:layout_gravity="center_vertical"
+	                 android:gravity="center"
+	                 android:text="10"
+	                 android:textSize="50px" />
+             </LinearLayout>
+
+         </LinearLayout>
+     </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/llDecreaseFont"
+         android:layout_width="fill_parent"
+         android:layout_height="0dp"
+         android:layout_weight="0.20"
+         android:gravity="left|center_vertical"
+         android:paddingLeft="5sp"
+         android:paddingRight="5sp"
+         android:paddingTop="5sp" >
+
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="fill_parent"
+             android:orientation="vertical"
+             android:gravity="center_vertical"
+             android:layout_weight="0.55">
+
+             <TextView
+                 android:id="@+id/tvKataNameN"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="NOME KATA"
+                 android:textSize="20px" />
+
+             <TextView
+                 android:id="@+id/tvSetNameN"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="NOME SERIE"
+                 android:textSize="20px" />
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="fill_parent"
+             android:layout_weight="0.45"
+             android:gravity="right|center_vertical">
+
+             <gc.palazen.CheckImage
+                 android:id="@+id/p1N"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="20"
+                 android:layout_margin="2sp"
+                 android:scaleType="fitCenter"
+                 android:adjustViewBounds="true"
+                 android:src="@drawable/checkboxblur" />
+
+             <gc.palazen.CheckImage
+                 android:id="@+id/p2N"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="20"
+                 android:layout_margin="2sp"
+                 android:scaleType="fitCenter"
+                 android:adjustViewBounds="true"
+                 android:src="@drawable/checkboxblur" />
+
+             <gc.palazen.CheckImage
+                 android:id="@+id/p3N"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="20"
+                 android:layout_margin="2sp"
+                 android:scaleType="fitCenter"
+                 android:adjustViewBounds="true"
+                 android:src="@drawable/checkboxblur" />
+
+             <gc.palazen.CheckImage
+                 android:id="@+id/p4N"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="20"
+                 android:layout_margin="2sp"
+                 android:scaleType="fitCenter"
+                 android:adjustViewBounds="true"
+                 android:src="@drawable/checkboxblur" />
+
+             <gc.palazen.CheckImage
+                 android:id="@+id/p5N"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="20"
+                 android:layout_margin="2sp"
+                 android:scaleType="fitCenter"
+                 android:adjustViewBounds="true"
+                 android:src="@drawable/checkboxblur" />
+
+             <TextView
+                 android:id="@+id/tvTotalN"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="20"
+                 android:layout_gravity="center_vertical"
+                 android:gravity="center"
+                 android:text="10"
+                 android:textSize="50px" />
+
+         </LinearLayout>
+     </LinearLayout>
+
+ </LinearLayout>

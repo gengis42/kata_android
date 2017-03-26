@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+<!--
+    <TextView
+        android:id="@+id/tvLabelServerIp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="server"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tvServerIp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:maxLines="1"
+            android:text="192.168.0.254"
+            android:textSize="40dp" >
+        </TextView>
+
+        <Button
+            android:id="@+id/btnEditServerIp"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:text="settings" />
+
+    </LinearLayout>
+
+    <gc.palazen.AutoRepeatButton
+        android:id="@+id/btnTestConnection"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        android:text="connect / reload" />
+
+    <TextView
+        android:id="@+id/tvTestConnectionResult"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btnOpenForms"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        android:text="open"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tvmac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+    <TextView
+        android:id="@+id/tvip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+</LinearLayout>

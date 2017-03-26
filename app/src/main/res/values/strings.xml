@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kata</string>
+    <string name="previous">&lt;</string>
+    <string name="validate">VALIDATE</string>
+    <string name="next">&gt;</string>
+    <string name="r0">  0          </string>
+    <string name="r1">  1          </string>
+    <string name="r2">  2          </string>
+    <string name="r3">  3          </string>
+    <string name="r4">  4          </string>
+    <string name="r5">  5          </string>
+    <string name="r6">  6          </string>
+    <string name="r7">  7          </string>
+    <string name="r8">  8          </string>
+    <string name="r9">  9          </string>
+    <string name="r10">  10         </string>
+    
+    <string name="restart">restart</string>
+
+</resources>

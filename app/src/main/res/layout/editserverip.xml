@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvServerIp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="server ip"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/etServerIp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textUri"
+        android:maxLines="1"
+        android:textSize="40dp" />
+
+    <CheckBox
+        android:id="@+id/chkFluidityEnable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="fluidity" />
+
+    <Button
+        android:id="@+id/btnSaveAndClose"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:text="save and close" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:text="update" />
+
+</LinearLayout>
