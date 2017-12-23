@@ -128,6 +128,16 @@
                  android:adjustViewBounds="true"
                  android:src="@drawable/checkboxblur" />
 
+             <gc.palazen.HalvedRadio
+                 android:id="@+id/phP"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="20"
+                 android:layout_margin="2sp"
+                 android:scaleType="fitCenter"
+                 android:adjustViewBounds="true"
+                 android:button="@null" />
+
              <TextView
                  android:id="@+id/tvTotalP"
                  android:layout_width="fill_parent"
@@ -185,7 +195,7 @@
              android:layout_height="fill_parent"
              android:layout_weight="0.45"
              android:orientation="horizontal"
-             android:weightSum="1.20"
+             android:weightSum="1.40"
              android:gravity="right|center_vertical" >
 
              <LinearLayout
@@ -261,6 +271,40 @@
 	                 android:layout_margin="0sp"
 	                 android:padding="3sp"
 	                 android:src="@drawable/checkbox_off_background_f" />
+             </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="0.20"
+                 >
+
+                 <RadioGroup
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:orientation="vertical"
+                     android:weightSum="0.30">
+                     <gc.palazen.HalvedRadio android:id="@+id/radio_plus"
+                         android:layout_margin="3px"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:button="@null"
+                         android:layout_weight="0.10"/>
+                     <gc.palazen.HalvedRadio android:id="@+id/radio_equal"
+                         android:layout_margin="3px"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:button="@null"
+                         android:checked="true"
+                         android:layout_weight="0.10"/>
+                     <gc.palazen.HalvedRadio android:id="@+id/radio_minus"
+                         android:layout_margin="3px"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:button="@null"
+                         android:layout_weight="0.10"/>
+                 </RadioGroup>
+
              </LinearLayout>
              
              <LinearLayout
@@ -368,6 +412,16 @@
                  android:scaleType="fitCenter"
                  android:adjustViewBounds="true"
                  android:src="@drawable/checkboxblur" />
+
+             <gc.palazen.HalvedRadio
+                 android:id="@+id/phN"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="20"
+                 android:layout_margin="2sp"
+                 android:scaleType="fitCenter"
+                 android:adjustViewBounds="true"
+                 android:button="@null" />
 
              <TextView
                  android:id="@+id/tvTotalN"

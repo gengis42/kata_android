@@ -115,7 +115,7 @@ public class CompileFluidityActivity extends Activity {
 	        		}
 	        		else
 	        		{
-	        			Toast.makeText(getApplicationContext(), "Connection error!", 100).show();
+	        			Toast.makeText(getApplicationContext(), "Connection error!", Toast.LENGTH_SHORT).show();
 	        		}
 	        	}
 	        	else

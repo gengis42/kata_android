@@ -32,4 +32,5 @@
     <style name="layoutForgotten">
         <item name="android:background">#77000000</item>
     </style>
+
 </resources>

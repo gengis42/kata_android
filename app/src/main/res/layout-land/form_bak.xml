@@ -4,7 +4,40 @@
      android:layout_height="fill_parent"
      android:orientation="vertical"
      android:weightSum="1" >
+     
+     <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="0dp" 
+         android:layout_weight="0.25"
+         android:gravity="bottom">
 
+         <Button
+             android:id="@+id/btnValidate"
+             android:layout_width="wrap_content"
+             android:layout_height="fill_parent"
+             android:layout_weight="0.80"
+             android:text="@string/validate"
+             android:textSize="60px" />
+         
+         <Button
+             android:id="@+id/btnPrevious"
+             android:layout_width="wrap_content"
+             android:layout_height="fill_parent"
+             android:layout_weight="0.20"
+             android:text="@string/previous"
+             android:textSize="60px"
+             android:visibility="invisible" />
+
+         <Button
+             android:id="@+id/btnNext"
+             android:layout_width="wrap_content"
+             android:layout_height="fill_parent"
+             android:layout_weight="0.20"
+             android:text="@string/next"
+             android:textSize="60px"
+             android:visibility="invisible" />
+     </LinearLayout>
+     
      <LinearLayout
          android:id="@+id/llIncreaseFont"
          android:baselineAligned="false"
@@ -165,7 +198,8 @@
 	                 android:id="@+id/p1"
 	                 android:layout_width="match_parent"
 	                 android:layout_height="match_parent"
-	                 android:layout_margin="2sp"
+	                 android:layout_margin="0sp"
+	                 android:padding="3sp"
 	                 android:src="@drawable/checkbox_off_background_s" />
              </LinearLayout>
              
@@ -179,7 +213,8 @@
 	                 android:id="@+id/p2"
 	                 android:layout_width="match_parent"
 	                 android:layout_height="match_parent"
-	                 android:layout_margin="2sp"
+	                 android:layout_margin="0sp"
+	                 android:padding="3sp"
 	                 android:src="@drawable/checkbox_off_background_s" />
              </LinearLayout>
              
@@ -193,7 +228,8 @@
 	                 android:id="@+id/p3"
 	                 android:layout_width="match_parent"
 	                 android:layout_height="match_parent"
-	                 android:layout_margin="2sp"
+	                 android:layout_margin="0sp"
+	                 android:padding="3sp"
 	                 android:src="@drawable/checkbox_off_background_m" />
              </LinearLayout>
              
@@ -207,7 +243,8 @@
 	                 android:id="@+id/p4"
 	                 android:layout_width="match_parent"
 	                 android:layout_height="match_parent"
-	                 android:layout_margin="2sp"
+	                 android:layout_margin="0sp"
+	                 android:padding="3sp"
 	                 android:src="@drawable/checkbox_off_background_b" />
              </LinearLayout>
              
@@ -221,7 +258,8 @@
 	                 android:id="@+id/p5"
 	                 android:layout_width="match_parent"
 	                 android:layout_height="match_parent"
-	                 android:layout_margin="2sp"
+	                 android:layout_margin="0sp"
+	                 android:padding="3sp"
 	                 android:src="@drawable/checkbox_off_background_f" />
              </LinearLayout>
              
@@ -342,39 +380,6 @@
                  android:textSize="50px" />
 
          </LinearLayout>
-     </LinearLayout>
-
-     <LinearLayout
-         android:layout_width="fill_parent"
-         android:layout_height="0dp" 
-         android:layout_weight="0.25"
-         android:gravity="bottom">
-
-         <Button
-             android:id="@+id/btnPrevious"
-             android:layout_width="wrap_content"
-             android:layout_height="fill_parent"
-             android:layout_weight="0.20"
-             android:text="@string/previous"
-             android:textSize="60px"
-             android:visibility="invisible" />
-
-         <Button
-             android:id="@+id/btnValidate"
-             android:layout_width="wrap_content"
-             android:layout_height="fill_parent"
-             android:layout_weight="0.80"
-             android:text="@string/validate"
-             android:textSize="60px" />
-
-         <Button
-             android:id="@+id/btnNext"
-             android:layout_width="wrap_content"
-             android:layout_height="fill_parent"
-             android:layout_weight="0.20"
-             android:text="@string/next"
-             android:textSize="60px"
-             android:visibility="invisible" />
      </LinearLayout>
 
  </LinearLayout>

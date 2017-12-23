@@ -174,7 +174,7 @@ public class KataSet {
 		int i = index - 1;
 		if(i < maxIndex && i >= 0)
 			return arrayPenalty[i];
-		return "00000";
+		return "00000e";
 	}
 	
 	//
@@ -198,7 +198,7 @@ public class KataSet {
 		int i = index + 1;
 		if(i < maxIndex && i >= 0)
 			return arrayPenalty[i];
-		return "00000";
+		return "00000e";
 	}
 	////////////////////////////////////////////////////////////
 	
@@ -274,12 +274,12 @@ public class KataSet {
 		return max;
 	}
 	
-	public int getPoint(int i)
+	public double getPoint(int i)
 	{
-		int total=10;
+		double total = 10.0;
 		String pen = arrayPenalty[i];
 		
-		if(pen.length() != 5)
+		if(pen.length() != 6)
 			return 0;
 		
 		int c1 = Integer.parseInt(pen.substring(0,1));
@@ -287,6 +287,13 @@ public class KataSet {
 		int c3 = Integer.parseInt(pen.substring(2,3));
 		int c4 = Integer.parseInt(pen.substring(3,4));
 		int c5 = Integer.parseInt(pen.substring(4,5));
+		char h = pen.substring(5,6).charAt(0);
+
+		double halved = 0.0;
+		switch(h) {
+			case 'p': halved = 0.5; break;
+			case 'm': halved = 0.5; break;
+		}
 		
     	if(c1 == 1)
     		total -= 1;
@@ -296,10 +303,13 @@ public class KataSet {
     		total -= 3;
     	if(c4 == 1)
     		total -= 5;
+
+		total += halved;
+
     	if(c5 == 1)
     		total = 0;
     	if(c1 == 1 && c2 == 1 && c3 == 1 && c4 == 1)
-    		total = 1;
+    		total = 1 + halved;
     	
     	return total;
 	}
@@ -312,13 +322,22 @@ public class KataSet {
 		return ret;
 	}
 	*/
+
+	public static String beautyFormat(double d)
+	{
+		if(d == (long) d)
+			return String.format("%d",(long)d);
+		else
+			return String.format("%s",d);
+	}
+
 	public SpannableStringBuilder getStringAllScore() {
         SpannableStringBuilder result = new SpannableStringBuilder("");
-        int n;
+        double n;
         for(int i=0; i<arrayPenalty.length; i++)
         {
         	n = getPoint(i);
-	        Spannable number = new SpannableString(""+n);
+	        Spannable number = new SpannableString("" + beautyFormat(n));
 	        number.setSpan(new ForegroundColorSpan(getColor(n)), 0, number.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 	        result.append(" ");
 	        result.append(number);
@@ -327,8 +346,8 @@ public class KataSet {
         return result;
 	}
 	
-	private int getColor(int num) {
-		switch(num)
+	private int getColor(double num) {
+		switch((int)num)
 		{
 		/*case 0: return Color.rgb(0xFF, 0x00, 0x00);
 		case 1: return Color.rgb(0xFF, 0x33, 0x00);
